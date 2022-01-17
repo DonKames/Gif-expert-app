@@ -10,7 +10,7 @@ describe('Pruebas <GifExpertApp />', () => {
     });
 
     test('Debe cargar el componente correctamente ', () => {
-        console.log(wrapper.html());
+        //console.log(wrapper.html());
         expect(wrapper).toMatchSnapshot();
     })
     
