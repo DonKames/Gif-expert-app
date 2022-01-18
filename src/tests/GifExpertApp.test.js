@@ -14,4 +14,12 @@ describe('Pruebas <GifExpertApp />', () => {
         expect(wrapper).toMatchSnapshot();
     })
     
+    test('Debe mostrar una lista de Categorias', () => {
+        const categories = ['One Punch', 'Samurai X', 'Dragon Ball'];
+        wrapper = shallow(<GifExpertApp defaultCategories={ categories } />);
+
+        expect( wrapper ).toMatchSnapshot();
+        expect( wrapper.find( 'GifGrid' ).length ).toBe( categories.length );
+    })
+    
 })
